@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { PuzzleBoard } from "@/components/PuzzleBoard";
-import { GameState, GameSettings, Difficulty } from "@/types";
+import { GameState, GameSettings } from "@/types";
 
 // 初期ゲーム設定
 const initialSettings: GameSettings = {
@@ -73,7 +73,6 @@ export const GameContainer: React.FC = () => {
   const [gameState, setGameState] = useState<GameState>(() =>
     createInitialGameState(initialSettings.boardSize)
   );
-  const [settings, setSettings] = useState<GameSettings>(initialSettings);
 
   // タイマー効果
   useEffect(() => {
@@ -111,9 +110,6 @@ export const GameContainer: React.FC = () => {
       gameState.tiles[clickedTileIndex].isBlank
     )
       return;
-
-    const clickedTile = gameState.tiles[clickedTileIndex];
-    const blankTile = gameState.tiles[blankTileIndex];
 
     // 空白タイルとクリックされたタイルが隣接しているかチェック
     const clickedRow = Math.floor(clickedTileIndex / gameState.boardSize);

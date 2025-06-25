@@ -16,7 +16,7 @@ export const PuzzleBoard: React.FC<PuzzleBoardProps> = ({
   onNewGame,
   onReset,
 }) => {
-  const { tiles, moves, time, isPlaying, isCompleted, boardSize } = gameState;
+  const { tiles, moves, time, isCompleted, boardSize } = gameState;
 
   const formatTime = (seconds: number): string => {
     const mins = Math.floor(seconds / 60);
