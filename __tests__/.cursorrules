@@ -1,0 +1,26 @@
+# テストディレクトリルール
+
+## テストガイドライン
+- JestとReact Testing Libraryを使用
+- コンポーネントテストには.test.tsx拡張子を使用
+- ユーティリティテストには.test.ts拡張子を使用
+- 機能やコンポーネントごとにテストをグループ化
+
+## テスト構造
+```
+__tests__/
+├── components/
+│   ├── ComponentName.test.tsx
+│   └── ComponentName.test.ts
+├── utils/
+│   └── utility-name.test.ts
+└── integration/
+    └── feature-name.test.ts
+```
+
+## ベストプラクティス
+- 説明的なテスト名を書く
+- 実装ではなくユーザーの動作をテストする
+- data-testid属性は控えめに使用する
+- 外部依存関係をモックする
+- テストは焦点を絞り、分離して保持する 

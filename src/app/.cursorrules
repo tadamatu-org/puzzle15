@@ -1,0 +1,26 @@
+# Appディレクトリルール（Next.js App Router）
+
+## ページガイドライン
+- ルートページにはpage.tsxを使用
+- 共有レイアウトにはlayout.tsxを使用
+- ローディング状態にはloading.tsxを使用
+- エラーバウンダリにはerror.tsxを使用
+- 404ページにはnot-found.tsxを使用
+
+## ファイル構造
+```
+app/
+├── layout.tsx (ルートレイアウト)
+├── page.tsx (ホームページ)
+├── globals.css (グローバルスタイル)
+├── loading.tsx (ローディングUI)
+├── error.tsx (エラーUI)
+└── not-found.tsx (404ページ)
+```
+
+## ベストプラクティス
+- ページはシンプルで焦点を絞ったものにする
+- デフォルトでServer Componentsを使用
+- 必要な場合のみClient Componentsを使用
+- ローディングとエラー状態を適切に処理する
+- SEOのために適切なメタデータを使用する 
